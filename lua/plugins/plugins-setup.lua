@@ -45,7 +45,12 @@ return require('packer').startup(function(use)
   use "nvim-treesitter/nvim-treesitter" -- 语法高亮
   use "p00f/nvim-ts-rainbow" -- 配合treesitter，不同括号颜色区分
 
-  use "windwp/nvim-autopairs" -- 自动补全括号
+  use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",  -- 这个相当于mason.nvim和lspconfig的桥梁
+    "neovim/nvim-lspconfig"
+  }
+
 
   use "akinsho/bufferline.nvim" -- buffer分割线
 
